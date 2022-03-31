@@ -7,6 +7,7 @@ var UserName, UserEmail;
 
 //AWS Region Code
 aws_region = 'us-east-1';
+AWS.config.region = aws_region;
 
 AWS.config.apiVersions = {
     cognitoidentityserviceprovider: '2016-04-18'
