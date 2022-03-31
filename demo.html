@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Inside the System</title>
+    </head>
+
+    <body>
+        <div>
+            <h1>Welcome</h1>
+            <p id="userName"></p>
+            <p id="userEmail"></p>
+        </div>
+
+        <div>
+            <!--DynamoDB-->
+            <input type="search" id="deviceid">
+            <button onclick="getdevicedetails(document.getElementById('deviceid').value)">Search</button>
+
+            <!--Place where result returns-->
+            <textarea readonly id="result" style ="width: 500px;height: 600px;"></textarea>
+        </div>
+
+        <script src="https://sdk.amazonaws.com/js/aws-sdk-2.834.0.min.js"></script>
+        <script src="main.js"></script>
+        <script src="dynamodb.js"></script>
+    </body>
+    
+</html>
