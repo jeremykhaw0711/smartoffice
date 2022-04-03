@@ -13,9 +13,16 @@
 
         <div>
             <!--DynamoDB-->
-            <input type="search" id="deviceid">
-            <button onclick="getdevicedetails(document.getElementById('deviceid').value)">Search</button>
+            <p>Search Device Status</p>
+            <input type="number" id="number" placeholder="Number" >
+            <button onclick="getdevicedetails(document.getElementById('number').value)">Search Number (Status)</button>
 
+            <br>
+            <p>Search Device Data</p>
+            <input type = "number" id="DataNum" placeholder = "DataNum">
+            <button onclick="getdevicedata(document.getElementById('DataNum').value)">Search DataNum (Data)</button>
+            
+            <br>
             <!--Place where result returns-->
             <textarea readonly id="result" style ="width: 500px;height: 600px;"></textarea>
         </div>
