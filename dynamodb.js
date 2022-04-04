@@ -2,7 +2,7 @@ const apiUrl = window.location.href
 const apiReplacedURL = apiUrl.replace('#', '&')
 const apiFinalURL = new URLSearchParams(apiReplacedURL)
 
-var api_access_token = apiFinalURL.get('id_token')
+var api_access_token = apiFinalURL.get('access_token')
 
 
 //DCS_Table
