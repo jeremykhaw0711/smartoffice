@@ -22,8 +22,11 @@ var getdevicedetails = (input)=>{
             },
         }
     )
-        .then(response => {
-            document.getElementById('result').innerHTML = response.json();
+        .then(function(response){
+            return response.json();
+        })
+        .then (function(data){
+            document.getElementById('result').innerHTML = data;
         })
         .catch(function (err) {
             console.log('error: ' + err);
@@ -46,7 +49,7 @@ var getdevicedata = (DataNum)=>{
             },
         }
     )
-    .then(function(response){
+        .then(function(response){
             return response.json();
         })
         .then(function (data) {
