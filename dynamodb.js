@@ -13,7 +13,7 @@ var getdevicedetails = (number)=>{
         {
             method:"POST",
             body: JSON.stringify({
-                "number": number
+                "number": parseInt(number)
             }),
             headers:{
                 'Content-Type':'application/json',
@@ -40,7 +40,7 @@ var getdevicedata = (DataNum)=>{
         {
             method:"POST",
             body: JSON.stringify({
-                "datanum":DataNum
+                "datanum": parseInt(DataNum)
             }),
             headers:{
                 'Content-Type':'application/json',
