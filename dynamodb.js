@@ -8,14 +8,13 @@ var api_access_token = apiFinalURL.get('id_token')
 //DCS_Table
 var getdevicedetails = (input)=>{
 
-    let test = {number :parseInt(input)}
     
     fetch(
         'https://n5z0lp4nxg.execute-api.us-east-1.amazonaws.com/DCS_Table/dcs_table',
         {
             method:"POST",
             body: JSON.stringify({
-                test
+                "number": parseInt(input)
             }),
             headers:{
                 'Content-Type':'application/json',
