@@ -15,7 +15,7 @@ var getdevicedetails = (input)=>{
         {
             method:"POST",
             body: JSON.stringify({
-                "number": test
+                test
             }),
             headers:{
                 'Content-Type':'application/json',
