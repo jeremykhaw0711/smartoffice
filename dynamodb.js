@@ -22,15 +22,15 @@ var getdevicedetails = (input)=>{
             },
         }
     )
-        .then(function(response){
-            return response.json();
-        })
-        .then (function(data){
-            document.getElementById('result').innerHTML = data;
-        })
-        .catch(function (err) {
-            console.log('error: ' + err);
-        });
+    .then(function(response){
+        return response.json();
+    })
+    .then(function (data) {
+        document.getElementById('result').innerHTML = JSON.stringify(data);
+    })
+    .catch(function (err) {
+        console.log('error: ' + err);
+    });
 }
 
 //DCS_Table2
@@ -49,11 +49,11 @@ var getdevicedata = (DataNum)=>{
             },
         }
     )
-        .then(function(response){
+    .then(function(response){
             return response.json();
         })
         .then(function (data) {
-            document.getElementById('result').innerHTML = data;
+            document.getElementById('result').innerHTML = JSON.stringify(data);
         })
         .catch(function (err) {
             console.log('error: ' + err);
