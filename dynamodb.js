@@ -2,7 +2,7 @@ const apiUrl = window.location.href
 const apiReplacedURL = apiUrl.replace('#', '&')
 const apiFinalURL = new URLSearchParams(apiReplacedURL)
 
-var api_access_token = apiFinalURL.get('access_token')
+var api_access_token = apiFinalURL.get('id_token')
 
 
 //DCS_Table
@@ -17,7 +17,7 @@ var getdevicedetails = (number)=>{
             }),
             headers:{
                 'Content-Type':'application/json',
-                'authentication':api_access_token
+                'authorization':api_access_token
             },
         }
     )
@@ -44,7 +44,7 @@ var getdevicedata = (DataNum)=>{
             }),
             headers:{
                 'Content-Type':'application/json',
-                'authentication':api_access_token
+                'authorization':api_access_token
             },
         }
     )
