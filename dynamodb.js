@@ -22,10 +22,9 @@ var getdevicedetails = (input)=>{
             },
         }
     )
-        .then(response =>{
-
-            document.getElementById('result').innerHTML = response;
-        })  
+        .then(response => {
+            document.getElementById('result').innerHTML = response.json();
+        })
         .catch(function (err) {
             console.log('error: ' + err);
         });
